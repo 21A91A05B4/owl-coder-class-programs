@@ -1,9 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
+int mod=10e9+7;
 int BE(int a,int b){
 	int res=1;
 	while(b){
-		if(b&1){
+		if(b&1){                    //power of 2 numbers
 			b=b-1;
 			res*=a;
 		}
@@ -14,9 +15,13 @@ int BE(int a,int b){
 	}
 	return res;
 }
-int main(){                 //power of 2 numbers
+int inverse(int b){
+	int x=BE(b,mod-2);               //inverse of a num
+}
+int main(){                 
 	int a,b;
 	cin>>a>>b;
 	int ans=BE(a,b);
 	cout<<ans;
+	cout<<inverse(b);
 }
